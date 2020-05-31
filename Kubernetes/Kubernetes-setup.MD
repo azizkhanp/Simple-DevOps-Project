@@ -63,6 +63,25 @@
     ```sh
     kops update cluster demo.k8s.kubernets.net --yes
     ```
+    
+     ```sh
+Suggestions:
+ * list clusters with: kops get cluster
+ * edit this cluster with: kops edit cluster demo.k8s.kubernets.net
+ * edit your node instance group: kops edit ig --name=demo.k8s.kubernets.net nodes
+ * edit your master instance group: kops edit ig --name=demo.k8s.kubernets.net master-ap-south-1b
+
+Finally configure your cluster with: kops update cluster --name demo.k8s.kubernets.net --yes
+```
+
+```sh
+Suggestions:
+ * validate cluster: kops validate cluster
+ * list nodes: kubectl get nodes --show-labels
+ * ssh to the master: ssh -i ~/.ssh/id_rsa admin@api.demo.k8s.kubernets.net
+ * the admin user is specific to Debian. If not using Debian please use the appropriate user based on your OS.
+ * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/operations/addons.md.
+```
 
 1. Validate your cluster
      ```sh
